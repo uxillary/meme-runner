@@ -12,6 +12,9 @@ let cloudX2 = 1100;
 
 let birdX = 900;
 
+let cloudImage = new Image();
+cloudImage.src = 'img/cloud1.png';  // Replace 'cloud.png' with the path to your cloud image.
+
 document.addEventListener("keydown", moveCharacter);
 
 function moveCharacter(event) {
@@ -55,7 +58,7 @@ function draw() {
 
   // Draw moving clouds and bird
   drawCloud(cloudX1, 50, 80, 40);
-  drawCloud(cloudX2, 30, 60, 30);
+  ctx.drawImage(cloudImage, cloudX2, 30);
   drawBird(birdX, 100);
 
   // Draw character
